@@ -12,6 +12,7 @@ Clear documentation was hard to find on the outset.
 download credentials from the Google API Project Dashboard as in
 [the google web quickstart](https://developers.google.com/calendar/quickstart/js),
 and remane `config.json` in this project.  See the config.example.json as an example.
+Add your `CLIENT_ID` id to `quickstart.html`
 
 This is just a demo so we'll use an easy server.
 Make sure you have python installed on your machine and from the project root run (python 2):

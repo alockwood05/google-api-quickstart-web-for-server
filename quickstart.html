@@ -90,7 +90,7 @@ limitations under the License.
        *  Sign in the user upon button click.
        */
       function handleAuthClick(event) {
-        gapi.auth2.getAuthInstance().grantOfflineAccess().then(resp => console.log(resp) || resp);
+        gapi.auth2.getAuthInstance().grantOfflineAccess().then(showCode);
       }
 
       /**
@@ -110,6 +110,11 @@ limitations under the License.
         var pre = document.getElementById('content');
         var textContent = document.createTextNode(message + '\n');
         pre.appendChild(textContent);
+      }
+
+      function showCode(obj) {
+        console.log(obj);
+        appendPre('Code: ' + obj.code);
       }
 
       /**
