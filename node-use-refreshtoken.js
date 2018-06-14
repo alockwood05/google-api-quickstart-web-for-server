@@ -76,6 +76,7 @@ function listEvents(auth) {
   });
   const r = repl.start('node>');
   r.context.calendar = calendar;
+  r.context.plus = google.plus({version: 'v1', auth});;
   r.context.auth = auth;
 }
 
