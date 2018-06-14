@@ -1,6 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
+const repl = require('repl');
 
 // If modifying these scopes, delete credentials.json.
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
@@ -73,5 +74,8 @@ function listEvents(auth) {
       console.log('No upcoming events found.');
     }
   });
+  const r = repl.start('node>');
+  r.context.calendar = calendar;
+  r.context.auth = auth;
 }
 
